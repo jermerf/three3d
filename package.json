@@ -1,0 +1,31 @@
+{
+  "name": "three3d",
+  "version": "1.0.0",
+  "description": "A simple Threejs App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jermerf/three3d.git"
+  },
+  "keywords": [
+    "heroku",
+    "threejs",
+    "express",
+    "node"
+  ],
+  "author": "Jermaine Francoeur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jermerf/three3d/issues"
+  },
+  "homepage": "https://github.com/jermerf/three3d#readme",
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
