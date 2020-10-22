@@ -1,4 +1,4 @@
-var sock = new WebSocket("ws://three3d.herokuapp.com")
+var sock = new WebSocket("wss://three3d.herokuapp.com")
 
 sock.addEventListener('message', message => {
   var data = JSON.parse(message.data)
