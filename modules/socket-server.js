@@ -17,6 +17,12 @@ function init() {
       count: wss.clients.size
     })
 
+    socket.on('message', message => {
+      sendToAllClients({
+        action: "message",
+        message
+      })
+    })
     socket.on('close', () => {
       console.log("Socket closed");
       sendToAllClients({

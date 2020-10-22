@@ -8,6 +8,9 @@ sock.addEventListener('message', message => {
     case "client_disconnect":
       showCubesForSockets(data.count)
       break
+    case "message":
+      console.log("SOCKETMESSAGE", data.message)
+      break
   }
 })
 
