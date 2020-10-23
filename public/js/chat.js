@@ -37,8 +37,9 @@ function nameChange(id, name) {
 }
 
 function addChat(id, msg) {
-  var myMessageClass = (id == myId ? 'class="mymsg"' : '')
+  popCube(cubes[id])
   var client = clients.find(c => c.id == id)
+  var myMessageClass = (id == myId ? 'class="mymsg"' : '')
   var myDate = (new Date()).toString().split(" GMT")[0]
   var template = `
   <div ${myMessageClass} style="background-color: ${client.color}">

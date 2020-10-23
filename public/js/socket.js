@@ -2,6 +2,7 @@
 var sock = new WebSocket("wss://three3d.herokuapp.com")
 var clients = []
 var myId = -1
+
 sock.s = (obj) => {
   sock.send(JSON.stringify(obj))
 }
@@ -20,6 +21,7 @@ sock.addEventListener('message', message => {
       break
     case "colorChange":
       setCubeColor(data.id, data.color)
+      setClientColor(data.id, data.color)
       break
     case "nameChange":
       nameChange(data.id, data.name)
@@ -29,6 +31,11 @@ sock.addEventListener('message', message => {
       break
   }
 })
+
+function setClientColor(id, color) {
+  var client = clients.find(c => c.id == id)
+  client.color = color
+}
 
 function showCubesForClients() {
   while (cubes.length > clients.length) {

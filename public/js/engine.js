@@ -17,6 +17,22 @@ function setCubeColor(i, color) {
   cubes[i].material.color = new THREE.Color(color)
 }
 
+function popCube(cube) {
+  var frame = 0
+  var frames = 20
+  var baseY = cube.position.y
+  var offset = 0
+  var intervalHandle = setInterval(() => {
+    frame++
+    cube.position.y = baseY + offset
+    offset = (100 - ((frame - 10) * (frame - 10))) / 200
+    if (frame == frames) {
+      cube.position.y = baseY
+      clearInterval(intervalHandle)
+    }
+  }, 33)
+}
+
 var scene = new THREE.Scene()
 var skylight = new THREE.HemisphereLight("#ffffff", 1)
 scene.add(skylight)
