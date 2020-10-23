@@ -1,5 +1,5 @@
-var sock = new WebSocket("ws://localhost:3000")
-// var sock = new WebSocket("wss://three3d.herokuapp.com")
+// var sock = new WebSocket("ws://localhost:3000")
+var sock = new WebSocket("wss://three3d.herokuapp.com")
 var clients = []
 var myId = -1
 sock.s = (obj) => {
