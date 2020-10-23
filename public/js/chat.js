@@ -38,11 +38,11 @@ function nameChange(id, name) {
 
 function addChat(id, msg) {
   var myMessageClass = (id == myId ? 'class="mymsg"' : '')
-  var name = clients.find(c => c.id == id).name
+  var client = clients.find(c => c.id == id)
   var myDate = (new Date()).toString().split(" GMT")[0]
   var template = `
-  <div ${myMessageClass}>
-    <div class="sender">${name}</div>
+  <div ${myMessageClass} style="background-color: ${client.color}">
+    <div class="sender">${client.name}</div>
     <div class="message">${msg}</div>
     <div class="date">${myDate}</div>
   </div>

@@ -37,8 +37,8 @@ div#chatbox > button, div#chatbox > input{
   top: 15px;
   font-size: 200%;
   background: none; 
-  background-color: #2c3d6840;
-  border: 1px solid #4661a440;
+  background-color: #c8d7fd40;
+  border: 1px solid grey;
   border-radius: 10px;
   transition: background-color 0.2s ;
 }
@@ -46,7 +46,6 @@ div#chatbox > button, div#chatbox > input{
 div#chatbox button:hover, div#chatbox > input:hover{
   cursor: pointer;
   background-color: #2c3d68a0;
-  border: 1px solid #4661a4a0;
 }
 
 div#chatbox > input{
