@@ -1,0 +1,99 @@
+*{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.hidden{
+  display: none;
+}
+div#ui,div#messages,div#chatbox{
+  position: absolute;
+  top:0;
+  right:0;
+  bottom: 0;
+  left:0;
+}
+
+div#messages{
+  bottom: 25%;
+  opacity: 0.75;
+}
+
+div#chatbox{
+  top: 75%;
+}
+
+div#chatbox textarea{
+  margin-top: 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+}
+
+div#chatbox > button, div#chatbox > input{
+  padding: 15px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 200%;
+  background: none; 
+  background-color: #2c3d6840;
+  border: 1px solid #4661a440;
+  border-radius: 10px;
+  transition: background-color 0.2s ;
+}
+
+div#chatbox button:hover, div#chatbox > input:hover{
+  cursor: pointer;
+  background-color: #2c3d68a0;
+  border: 1px solid #4661a4a0;
+}
+
+div#chatbox > input{
+  right: auto;
+  left: 15px;
+}
+
+div#messages > div{
+  margin: 5px;
+  padding: 5px;
+  background-color: #34682c;
+  border: 1px solid # 17c011;
+  border-radius: 10px;
+  margin-right: 3em;
+}
+
+div#messages > div.mymsg{
+  background-color: #2c3d68;
+  border: 1px solid #4661a4;
+  margin-right: 0;
+  margin-left: 3em;
+}
+
+div#messages div.sender{
+  font-size: 80%;
+}
+
+div#messages div.message{
+  margin-left: 20px;
+}
+
+div#messages div.date{
+  text-align: right;
+  font-size: 60%;
+}
+div#setName{
+  margin: 50px;
+  padding: 5px;
+  background-color: #2c3d68;
+  border: 1px solid #4661a4;
+  border-radius: 10px;
+  text-align: center;
+}
+div#setName input{
+  width: calc(100% - 10px);
+  padding: 5px;
+  background: none;
+  border: none;
+  text-align: center;
+}
